@@ -6,6 +6,7 @@ import { CartProvider } from "@/context/CartContext";
 import Header from "@/components/layout/Header";
 import AnimatePresenceWrapper from "@/components/style/AnimatePresenceWrapper";
 import Footer from "@/components/layout/Footer";
+import { Skiper19 } from "@/components/layout/backgroundline";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,17 +21,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" > {/* You can add 'dark' for a dark theme */}
+    <html lang="en">
       <body className={inter.className}>
         <CartProvider>
-          <Header /> {/* <-- ADD HEADER HERE */}
-          <AnimatePresenceWrapper>
-            {/* We wrap children in a main tag for semantic HTML and styling */}
-            <main className="min-h-screen">
-              {children}
-            </main>
-          </AnimatePresenceWrapper>
-          <Footer /> {/* <-- ADD FOOTER HERE */}
+          <div className="relative">
+            
+            {/* <CrowdCanvas src={"/images/peeps/all-peeps.png"} /> */}
+            <div className="relative z-10">
+              <Header />
+              <Skiper19/>
+              <AnimatePresenceWrapper>
+                <main className="min-h-screen">{children}</main>
+              </AnimatePresenceWrapper>
+              <Footer />
+            </div>
+          </div>
         </CartProvider>
       </body>
     </html>

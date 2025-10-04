@@ -1,7 +1,7 @@
 // src/components/Footer.tsx
-import { Separator } from "@radix-ui/react-separator";
 import { Instagram, Shirt, Twitter } from "lucide-react";
 import Link from "next/link";
+import { Separator } from "../ui/separator";
 
 export default function Footer() {
   return (
