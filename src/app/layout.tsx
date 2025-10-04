@@ -25,11 +25,10 @@ export default function RootLayout({
       <body className={inter.className}>
         <CartProvider>
           <div className="relative">
-            
             {/* <CrowdCanvas src={"/images/peeps/all-peeps.png"} /> */}
             <div className="relative z-10">
               <Header />
-              <Skiper19/>
+              <Skiper19 />
               <AnimatePresenceWrapper>
                 <main className="min-h-screen">{children}</main>
               </AnimatePresenceWrapper>
